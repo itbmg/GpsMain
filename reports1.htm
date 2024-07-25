@@ -1,0 +1,30 @@
+﻿<table class="vehiclelogs" id="logstable" cellpadding="4" cellspacing="0">
+    <tbody>
+        <tr>
+            <td style="width: 150px; font-size: 12px; font-family: Verdana;">
+                <input type="checkbox" value="SelectAll" id="ckballveh" class="CancelPolicy" onchange="onallcheck(this);" />
+                <span style="height: 15px;">Select All</span>
+            </td>
+            <td style="width: 120px;">
+                <label id="lbl">
+                    Vehicles Count</label>
+                <label id="lblvehscount" style="font-size: 14px; font-weight: bold; color: Red; float: right;">
+                    0</label>
+            </td>
+        </tr>
+        {#foreach $T as vehicles}
+        <tr>
+            <td style="width: 150px; font-size: 12px; font-family: Verdana;">
+                <input type="checkbox" value="{$T.vehicles.vehicleno}" id="{$T.vehicles.vehicleno}"
+                    class="CancelPolicy" onchange="onvehiclecheck(this,'{$T.vehicles.vehicleno}');"
+                    onmouseover="bphover(this,'{ $T.vehicles.vehicleno }');" onmouseout="bpmouseout()" />
+                {#if $T.vehicles.vehiclemodeltype == 'Puff' || $T.vehicles.vehiclemodeltype == 'Tanker'} <span style="height: 15px;">{$T.vehicles.vehicleno}</span>
+                {#else} <span style="height: 15px;">{$T.vehicles.Routename}</span> {#/if}
+            </td>
+            <td style="width: 120px;">
+                <span style="height: 15px;">{$T.vehicles.vehiclemodeltype}</span>
+            </td>
+        </tr>
+        {#/for}
+    </tbody>
+</table>

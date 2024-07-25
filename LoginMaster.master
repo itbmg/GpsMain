@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LoginMaster.master.cs"
+    Inherits="LoginMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link rel="icon" href="Images/VPT.png" type="image/x-icon" title="GoTracking" />
+    <title>GoTracking</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=3001" />
+    <link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+     <style type="text/css">
+    .head {
+    position: absolute;
+    top: 129%;
+    left: 44%;
+   /* background: rgb(238, 238, 238);
+    padding: 10px;
+    box-shadow: 5px 5px 5px #888888;*/<img src="Images/monitoring-new.jpg" />
+    z-index:9999;
+    }
+    body
+    {
+            font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    /* background: #fff url(../images/bg.jpg) repeat top left; */
+    font-weight: 400;
+    font-size: 15px;
+    color: #1d3c41;
+    overflow-y: scroll;
+    z-index: 1;
+    display: block;
+    opacity: 1;
+    background-image: url("Images/monitoring-new.jpg");
+    /* height: 100%; */
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: cover !important;
+    background-position: center !important;
+    /* background-attachment: fixed !important; */
+}
+    }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!-- Header -->
+    <div class="container">
+        <!-- Codrops top bar -->
+        <!--/ Codrops top bar -->
+        <header>
+           <div class="head">
+    <img src="Images/Vyshnavilogo1.png" style="height:92px;width:153px;"/>
+</div>
+        </header>
+        <section>
+            <div id="container_demo">
+                <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                <a class="hiddenanchor" id="toregister"></a><a class="hiddenanchor" id="tologin">
+                </a>
+                <div id="wrapper">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </section>
+        <!-- End Main -->
+    </div>
+    <div id="footer">
+        <div id="footerlinks">
+            <div style="float: left; width: 100%; height: 20%;">
+                <div style="float: left; width: 50%; height: 20%;color:White;font-weight:bold;">
+                    Copyright &copy; 2016. <a style="color:White;font-weight:bold;" title="GoTracking" href="http://vyshnavi.in" target="_blank">
+                        Sri Vyshnavi Dairy Specialities (P) Ltd </a>, All Rights Reserved.
+                </div>
+                <div style="float: right; width: 32%; height: 30%;color:White;font-weight:bold;">
+                    Powered By <a style="color:White;font-weight:bold;" title="GoTracking" href="http://www.GoTracking.co.in" target="_blank">GoTracking</a>
+                </div>
+                <p class="copy">
+                </p>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
